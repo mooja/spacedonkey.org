@@ -1,10 +1,9 @@
 # vim: sw=2:noai
 ---
 - name: Install Base Packages
-  hosts: vagrant
+  hosts: webapp
   sudo: yes
   sudo_user: root
-  remote_user: vagrant
 
   roles:
 
@@ -12,7 +11,7 @@
 
     - role: app
       project_name: "spacedonkey.org"
-      nginx_server_name: "192.168.33.15.xip.io"
+      nginx_server_name: "spacedonkey.org"
       application_username: "spacedonkey"
       git_repo: "https://github.com/mooja/spacedonkey.org/"
       git_branch: "master"
