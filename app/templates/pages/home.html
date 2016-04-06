@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block extra-css %}
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock extra-css %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="title">hi, I'm max—coder & designer</h1>
+    <h2 class="subtitle">i love creating <span class="text-useful">useful</span> and <span class="text-beautiful">beautiful</span> things</h2>
+
+    <h3 class="sect">my work</h3>
+    <section>
+        <div class="img">
+            <img src="{% static 'img/ssip209-cover.png' %}" alt='ssip209 logo'>
+        </div>
+    </section>
+
+    <h3 class="sect">my code</h3>
+    <section>
+        <div class="img">
+            github account
+        </div>
+    </section>
+
+    <h3 class="sect">me</h3>
+    <section>
+        <div class="img">
+            my picture
+        </div>
+    </section>
+  </div>
+{% endblock content %}
