@@ -7,29 +7,24 @@
 {% endblock extra-css %}
 
 {% block content %}
-  <div class="container">
-    <h1 class="title">hi, I'm max—coder & designer</h1>
-    <h2 class="subtitle">i love creating <span class="text-useful">useful</span> and <span class="text-beautiful">beautiful</span> things</h2>
-
-    <h3 class="sect">my work</h3>
-    <section>
-        <div class="img">
-            <img src="{% static 'img/ssip209-cover.png' %}" alt='ssip209 logo'>
+  <div class="grid">
+    <div class="unit-1-3 site-header">
+        <div class="box">
+            <div class="site-logo">
+                <img src="assets/img/donkey-logo.svg" alt="spacedonkey" width="100px">
+                <h1> i'm max </h1>
+            </div>
+            <h2> i like creating useful and beautiful things</h2>
         </div>
-    </section>
-
-    <h3 class="sect">my code</h3>
-    <section>
-        <div class="img">
-            github account
+    </div>
+    <div class="site-content">
+        <div class="unit-1-3 site">
+            <a class="box" href="http://ssip209.org">
+                <h2 class="site__name">SSIP209.ORG</h2>
+                <p class="site__info">ssip209 info</p>
+                <p class="site__desc">ssip209 desc</p>
+            </a>
         </div>
-    </section>
-
-    <h3 class="sect">me</h3>
-    <section>
-        <div class="img">
-            my picture
-        </div>
-    </section>
+    </div>
   </div>
 {% endblock content %}
