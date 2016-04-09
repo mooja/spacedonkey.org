@@ -18,6 +18,12 @@
             backup=yes
   notify: reload nginx
 
+- name: Create the no-default Nginx configuration file
+  template: src=nginx_no-default.j2
+            dest=/etc/nginx/sites-available/no-default
+            backup=yes
+  notify: reload nginx
+
 - name: Ensure that the default site is disabled
   command: rm /etc/nginx/sites-enabled/default
            removes=/etc/nginx/sites-enabled/default
@@ -27,6 +33,12 @@
   command: ln -s /etc/nginx/sites-available/{{ application_username }}
            /etc/nginx/sites-enabled/{{ application_username }}
            creates=/etc/nginx/sites-enabled/{{ application_username }}
+  notify: reload nginx
+
+- name: make sure the no-default site is enabled
+  command: ln -s /etc/nginx/sites-available/no-default
+           /etc/nginx/sites-enabled/no-default
+           creates=/etc/nginx/sites-enabled/no-default
   notify: reload nginx
 
 - name: Ensure Nginx service is started
