@@ -2,9 +2,6 @@
 ---
 - name: Install Base Packages
   hosts: webapp
-  sudo: yes
-  sudo_user: root
-
   roles:
 
     - base
