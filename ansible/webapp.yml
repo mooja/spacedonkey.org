@@ -2,6 +2,9 @@
 ---
 - name: Install Base Packages
   hosts: webapp
+  remote_user: root
+  become: yes
+
   roles:
 
     - base
